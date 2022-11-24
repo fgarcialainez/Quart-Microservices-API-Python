@@ -9,6 +9,7 @@ run:
 
 clean:
 	docker-compose down --rmi all
+	docker-compose down --volumes
 
 test:
 	docker-compose run --rm core python -m pytest -vv -c /app/pyproject.toml
